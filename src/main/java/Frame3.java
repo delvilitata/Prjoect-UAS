@@ -27,14 +27,14 @@ public class Frame3 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jenisLaundry = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        inputKilo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        hargaperkilo = new javax.swing.JLabel();
+        tombolCalculate = new javax.swing.JButton();
         priceLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,10 +44,10 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("Payment:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clothes", "Bedcover", "Footwear", "Rug" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jenisLaundry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clothes", "Bedcover", "Footwear", "Rug" }));
+        jenisLaundry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jenisLaundryActionPerformed(evt);
             }
         });
 
@@ -55,10 +55,10 @@ public class Frame3 extends javax.swing.JFrame {
 
         jLabel3.setText("Heavy");
 
-        jTextField1.setText("Kg");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        inputKilo.setText("Kg");
+        inputKilo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                inputKiloActionPerformed(evt);
             }
         });
 
@@ -66,12 +66,12 @@ public class Frame3 extends javax.swing.JFrame {
 
         jLabel5.setText("Rp.");
 
-        jLabel6.setText("6.000");
+        hargaperkilo.setText("0000");
 
-        jButton1.setText("Calculate");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        tombolCalculate.setText("Calculate");
+        tombolCalculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                tombolCalculateActionPerformed(evt);
             }
         });
 
@@ -95,16 +95,16 @@ public class Frame3 extends javax.swing.JFrame {
                                         .addComponent(jLabel3))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputKilo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jenisLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel5)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                            .addComponent(hargaperkilo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                 .addComponent(priceLabel, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(jButton1)))
+                        .addComponent(tombolCalculate)))
                 .addGap(62, 62, 62))
         );
         jPanel1Layout.setVerticalGroup(
@@ -114,21 +114,21 @@ public class Frame3 extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jenisLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(hargaperkilo))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputKilo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(priceLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(tombolCalculate)
                 .addGap(55, 55, 55))
         );
 
@@ -152,17 +152,20 @@ public class Frame3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jenisLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisLaundryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jenisLaundryActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void inputKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputKiloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_inputKiloActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void tombolCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolCalculateActionPerformed
+    String input = inputKilo.getText();
+    int inputUser = Integer.parseInt(input);
+    int hargaFinal = inputUser * 6000;
+    priceLabel.setText("Price: Rp." + hargaFinal);//TODO add your handling code here:
+    }//GEN-LAST:event_tombolCalculateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,16 +203,16 @@ public class Frame3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel hargaperkilo;
+    private javax.swing.JTextField inputKilo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> jenisLaundry;
     private javax.swing.JLabel priceLabel;
+    private javax.swing.JButton tombolCalculate;
     // End of variables declaration//GEN-END:variables
 }
