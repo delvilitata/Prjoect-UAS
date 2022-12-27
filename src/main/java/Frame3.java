@@ -15,7 +15,7 @@ public class Frame3 extends javax.swing.JFrame {
     public Frame3() {
         initComponents();
     }
-
+    int harga;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -153,7 +153,11 @@ public class Frame3 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jenisLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisLaundryActionPerformed
-        // TODO add your handling code here:
+    if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Clothes")){
+    hargaperkilo.setText("6.000");harga=6000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Bedcover")){
+    hargaperkilo.setText("8.000");harga=8000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Footwear")){
+    hargaperkilo.setText("7.000");harga=7000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Rug")){
+    hargaperkilo.setText("10.000");harga=10000;}      // TODO add your handling code here:
     }//GEN-LAST:event_jenisLaundryActionPerformed
 
     private void inputKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputKiloActionPerformed
@@ -161,10 +165,12 @@ public class Frame3 extends javax.swing.JFrame {
     }//GEN-LAST:event_inputKiloActionPerformed
 
     private void tombolCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolCalculateActionPerformed
+    try {
     String input = inputKilo.getText();
     int inputUser = Integer.parseInt(input);
-    int hargaFinal = inputUser * 6000;
-    priceLabel.setText("Price: Rp." + hargaFinal);//TODO add your handling code here:
+    int hargaFinal = inputUser * harga;
+    priceLabel.setText("Price: Rp." + hargaFinal);}
+    catch (NumberFormatException e){priceLabel.setText("Input heavy total!");}//TODO add your handling code here:
     }//GEN-LAST:event_tombolCalculateActionPerformed
 
     /**
